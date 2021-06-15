@@ -1,17 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Routes from './routes/routes';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
+import { ptBR } from '@material-ui/data-grid'
+
+const theme = createMuiTheme(
+  {
+    palette: {
+      primary: {
+        light: '#A30601',
+        main: '#A30601',
+        dark: '#A30601',
+        contrastText: '#fff'
+      },
+      secondary: {
+        light: '#065E07',
+        main: '#065E07',
+        dark: '#065E07',
+        contrastText: '#000'
+      },
+    }
+  },
+  ptBR
+)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MuiThemeProvider theme={theme}>
+      <Routes />
+    </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
