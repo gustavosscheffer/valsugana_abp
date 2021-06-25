@@ -6,7 +6,7 @@ import ButtonOutlined from '../../components/buttons/buttonOutlined/buttonOutlin
 import ButtonPrimary from '../../components/buttons/buttonPrimary/buttonPrimary';
 import { useStyles } from './styles';
 
-function PessoasFisicas() {
+function Dancarinos() {
   const classes = useStyles();
   const history = useHistory();
   const onGoback = () => history.goBack();
@@ -17,31 +17,30 @@ function PessoasFisicas() {
         <Grid item xs>
           <Grid container spacing={2}>
             <Grid item xs={12} style={{ textAlign: 'center' }}>
-              <div className={classes.title}>Pessoas Físicas</div>
+              <div className={classes.title}>
+                Dançarinos
+              </div>
             </Grid>
             <Grid item xs={12}>
               <Grid container spacing={2} className={classes.grid_align}>
                 <Grid item xs={9}>
-                  <div>Dançarino teste</div>
+                  <div>
+                    Dançarino teste
+                  </div>
                 </Grid>
-                <Grid
-                  item
-                  xs={3}
-                  className={classes.grid_align}
-                  style={{ justifyContent: 'flex-end' }}
-                >
+                <Grid item xs={3} className={classes.grid_align} style={{justifyContent:"flex-end"}}>
                   <IconButton className={classes.icon_edit}>
-                    <FaPencilAlt />
+                    <FaPencilAlt/>
                   </IconButton>
-                  <IconButton className={classes.icon_trash}>
-                    <FaTrash />
+                  <IconButton  className={classes.icon_trash}>
+                    <FaTrash/>
                   </IconButton>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item xs={12} style={{ textAlign: 'center' }}>
-            <ButtonOutlined text='Voltar' style={{ marginRight: '10px' }} onClick={onGoback}/>
-              <Link to="/CadastroPessoaFisica">
+              <ButtonOutlined text='Voltar' style={{ marginRight: '10px' }} onClick={onGoback}/>
+              <Link to="/CadastroDancarino">
                 <ButtonPrimary text='Cadastrar'/>
               </Link>
             </Grid>
@@ -53,4 +52,4 @@ function PessoasFisicas() {
   );
 }
 
-export default PessoasFisicas;
+export default Dancarinos;

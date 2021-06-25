@@ -2,8 +2,12 @@ import React from "react";
 import {
     BrowserRouter as Router, Route, Switch
 } from "react-router-dom";
-import Home from '../pages/home'
+import CadastroDancarino from '../pages/cadastroDancarino';
+import CadastroPessoaFisica from '../pages/cadastroPessoaFisica';
+import Dancarinos from '../pages/dancarinos';
+import Home from '../pages/home';
 import Login from "../pages/login";
+import PessoasFisicas from '../pages/pessoasFisicas';
 
 export default function Routes() {
     return (
@@ -14,10 +18,16 @@ export default function Routes() {
                         <Home />
                     </Route>
                     <Route path="/PessoasFisicas">
-                        <Home />
+                        <PessoasFisicas/>
+                    </Route>
+                    <Route path="/CadastroPessoaFisica">
+                        <CadastroPessoaFisica/>
                     </Route>
                     <Route path="/Dancarinos">
-                        <Home />
+                        <Dancarinos/>
+                    </Route>
+                    <Route path="/CadastroDancarino">
+                        <CadastroDancarino/>
                     </Route>
                     <Route path="/">
                         <Login/>
