@@ -2,6 +2,7 @@ import React from 'react';
 import Field from '../../components/inputs'
 import { useStyles } from './styles';
 import { Grid } from '@material-ui/core'
+import { Link } from 'react-router-dom';
 import ButtonPrimary from '../../components/buttons/buttonPrimary/buttonPrimary';
 import LogoValsugana from '../../components/logo'
 
@@ -10,10 +11,10 @@ function Login() {
   return (
     <div className={classes.content}>
       <Grid container spacing={0}>
-        <Grid item xs/>
+        <Grid item xs />
         <Grid item xs>
           <Grid container spacing={2}>
-            <Grid item xs={12} style={{textAlign:"center"}}>
+            <Grid item xs={12} style={{ textAlign: "center" }}>
               <LogoValsugana height="140px" width="140px" />
             </Grid>
             <Grid item xs={12}>
@@ -22,12 +23,14 @@ function Login() {
             <Grid item xs={12}>
               <Field type="password" label="Senha" />
             </Grid>
-            <Grid item xs={12} style={{textAlign:"center"}}>
-              <ButtonPrimary text="Entrar" />
+            <Grid item xs={12} style={{ textAlign: "center" }}>
+              <Link to="/Home">
+                <ButtonPrimary text="Entrar" onClick />
+              </Link>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs/>
+        <Grid item xs />
       </Grid>
     </div>
   )

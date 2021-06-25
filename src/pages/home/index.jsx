@@ -30,7 +30,9 @@ function Home() {
               </Link>
             </Grid>
             <Grid item xs={12} style={{ textAlign: 'center' }}>
-              <ButtonOutlined text='Sair' style={{ width: '100%' }} />
+              <Link to='/'>
+                <ButtonOutlined text='Sair' style={{ width: '100%' }} />
+              </Link>
             </Grid>
           </Grid>
         </Grid>
