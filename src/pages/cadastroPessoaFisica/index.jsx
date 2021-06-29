@@ -1,6 +1,5 @@
 import { Grid } from '@material-ui/core';
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import ButtonOutlined from '../../components/buttons/buttonOutlined/buttonOutlined';
 import ButtonPrimary from '../../components/buttons/buttonPrimary/buttonPrimary';
@@ -80,7 +79,7 @@ function CadastroPessoaFisica() {
               <Field type='text' label='Endereço' value={pessoaFisica.endereco} onChange={(event) => setPessoaFisica({ ...pessoaFisica, endereco: event.target.value })} />
             </Grid>
             <Grid item xs={6}>
-              <Field type='date' label='Data de nascimento' value={pessoaFisica.dataNascimento} onChange={(event) => setPessoaFisica({ ...pessoaFisica, dataNascimento: event.target.value })} />
+              <Field type='date' label='Data de nascimento' defaultValue='2021-06-29' value={pessoaFisica.dataNascimento} onChange={(event) => setPessoaFisica({ ...pessoaFisica, dataNascimento: event.target.value })} />
             </Grid>
             <Grid item xs={12} style={{ textAlign: 'center' }}>
               <ButtonOutlined

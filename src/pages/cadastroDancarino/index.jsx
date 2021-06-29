@@ -44,7 +44,7 @@ function CadastroDancarino() {
               <Field type='text' label='Cidade' />
             </Grid>
             <Grid item xs={6}>
-              <Field type='date' label='Data de entrada' />
+              <Field type='date' defaultValue='2021-06-29' label='Data de entrada' />
             </Grid>
             <Grid item xs={12} style={{ textAlign: 'center' }}>
               <ButtonOutlined text='Cancelar' style={{ marginRight: '10px' }} onClick={onGoback}/>

@@ -25,7 +25,7 @@ function Dancarinos() {
               <Grid container spacing={2} className={classes.grid_align}>
                 <Grid item xs={9}>
                   <div>
-                    Dançarino teste
+                    Joãozinho
                   </div>
                 </Grid>
                 <Grid item xs={3} className={classes.grid_align} style={{justifyContent:"flex-end"}}>

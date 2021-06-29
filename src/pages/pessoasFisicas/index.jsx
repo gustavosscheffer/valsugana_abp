@@ -1,6 +1,5 @@
 import { Grid, IconButton } from '@material-ui/core';
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaPencilAlt, FaTrash } from 'react-icons/fa';
 import { Link, useHistory } from 'react-router-dom';
 import ButtonOutlined from '../../components/buttons/buttonOutlined/buttonOutlined';
@@ -39,7 +38,6 @@ function PessoasFisicas() {
             <Grid item xs={12}>
               {
                 people.map((person) => (
-
                   <Grid container spacing={2} className={classes.grid_align} key={person.id}>
                     <Grid item xs={9}>
                       <div>{person.nome}</div>
